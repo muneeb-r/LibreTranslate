@@ -1,7 +1,7 @@
 services:
   libretranslate:
     container_name: libretranslate
-    image: libretranslate/libretranslate:latest-cuda
+    image: libretranslate/libretranslate:latest
     ports:
       - "5000:5000"
     restart: unless-stopped
@@ -15,6 +15,7 @@ services:
       - LT_REQ_LIMIT=120
       - LT_UPDATE_MODELS=True
       - LT_LOAD_ONLY=en,ar,es
+      - LT_INSTALL_LANGUAGES=en,ar,es
       - LT_DEBUG=True
       - PUID=root
     volumes:
