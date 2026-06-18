@@ -8,14 +8,14 @@ services:
     command: >
       --disable-web-ui
       --update-models
-      --load-only en,ar,es
+      --load-only en,ar,es,fr,it,uk,de
     environment:
       - LT_API_KEYS_DB_PATH=/app/db/api_keys.db
       - LT_API_KEYS=True
       - LT_REQ_LIMIT=120
       - LT_UPDATE_MODELS=True
-      - LT_LOAD_ONLY=en,ar,es
-      - LT_INSTALL_LANGUAGES=en,ar,es
+      - LT_LOAD_ONLY=en,ar,es,fr,it,uk,de
+      - LT_INSTALL_LANGUAGES=en,ar,es,fr,it,uk,de
       - LT_DEBUG=True
       - PUID=root
     volumes:
